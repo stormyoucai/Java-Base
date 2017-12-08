@@ -1,0 +1,45 @@
+1、JDK:Java Development Kit:Java开发工具包
+
+2、Java SE：J2SE ：Java 2 Platform，Standard Edition
+   Java EE：J2EE ：Java 2 Platform, Enterprise Edition
+   Java ME: J2ME ：Java 2 Platform, Micro Edition
+
+3、Java编译命令：javac.exe
+   Java解释命令：java.exe
+   Java源文件(*.java)——>编译——>与平台无关的字节码文件(*.class)——>解释——>机器码指令
+
+4、Java程序组成：Java源文件、字节码文件、机器码指令
+
+5、Java虚拟机：Java Virtual Machine
+
+6、Java编译器针对Java虚拟机产生class文件，因此是独立于平台的。（即所有的class文件都是一样的，因为其针对的是JVM）
+   Java解释器负责将Java虚拟机的代码在特定的平台上运行。（同样的class文件，Java解释器会根据不同的JVM解释为相应的机器码指令）
+
+7、为了在命令行中直接使用Java编译命令和Java解释命令，需要配置path路径
+
+8、path路径的作用？
+    bin即binary的意思，二进制可执行文件，Java配置path路径表示，在windows中已经注册好了此文件目录，如果在命令行中直接执行命令，
+则会从此目录中查找到并执行。path的主要功能是设置JDK的可执行命令。
+
+9、在命令行窗口中输入java命令，系统是如何找到这个命令的？
+    按照顺序，系统先在当前目录搜索是否有java.exe, java.bat 等。 如果没有，就得到系统的PATH(不区分大小写)里面查找。
+path 就是系统为了搜索某个资源而配置的一个参数。多个目录之间用分号(linux里面用冒号)分割。
+
+11、注意：每次命令行重新启动都会重新读取所有的配置，所以一旦配置改变之后命令行要重新启动。
+
+12、classpath的作用？
+classpath顾名思义就是class文件的路径，
+classpath主要是在执行的时候起作用，告诉Java虚拟机*.class文件的保存路径，一般设置为"."表示当前目录下查找
+注意：classpath只有在java执行命令的时候起作用，在javac编译命令的时候不起作用
+
+13、class寻找过程？
+当我们需要某个class时，系统会自动在CLASSPATH里面搜索，如果是jar(注意jar就是一系列class的压缩包)，就自动从jar里面查找，
+如果是普通的目录，则在目录下面按照package进行查找。
+注意：与PATH不同的是，默认的CLASSPATH是不包含当前目录的，这也是CLASSPATH里面要包含一个点的道理了。
+
+总结：
+1、掌握Java各个名字缩写所代表的英文全称
+2、掌握Java解释和编译命令的区别，以及执行过程
+3、掌握Java开发环境的搭建，以及path、classpath的作用
+
+
