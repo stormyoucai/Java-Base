@@ -42,4 +42,7 @@ classpath主要是在执行的时候起作用，告诉Java虚拟机*.class文件
 2、掌握Java解释和编译命令的区别，以及执行过程
 3、掌握Java开发环境的搭建，以及path、classpath的作用
 
+参考博客：
+https://www.cnblogs.com/fjhh/p/5370634.html
+
 

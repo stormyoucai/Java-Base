@@ -1,0 +1,52 @@
+1、Java数据类型划分：
+基本数据类型：（类似于普通值）
+    数值型：
+        整数型：byte（位，-128~127，8位）、short（16位）、int（32位）、long（64位）
+        浮点型：float（32位）、double（64位）
+    字符型：char（字节，0~65535，无符号，16位，2字节，Unicode码）
+    布尔型：boolean
+引用数据类型：（传递的是内存地址）
+    类：class
+    接口：interface
+    数组：
+
+2、Java中char和byte的区别？
+1个字节即byte又称B，1位即bit又称b，1byte = 8bit（1B = 8b）
+byte：
+字节数据类型 ，是有符号型的，占1个字节（8位）；大小范围为-128—127
+char：
+字符数据类型 ，是无符号型的，占2字节(Unicode码）；大小范围 是0—65535 ；char是一个16位二进制的Unicode字符，Java用char来表示一个字符
+(2的16次方：65536)(注意：1个字节8位，8个bit位；2个字节16位，16个bit位；2个字节不等于1个字节 + 1个字节，而是1个字节 * 1个字节)
+char是一个16位二进制的Unicode字符，JAVA用char来表示一个字符 。
+char和byte的区别：
+    (1)char不能表示负数，byte可以
+    (2)char可以表示中文，byte不可以
+    (3)char、byte、int对于英文字符，可以相互转化
+
+3、数据的溢出：
+当整数的数据大小超过了可以表示的范围，而程序中又没有做数值范围的检查时，这个整型变量所输出的值将发生紊乱，且不是预期的运行结果。
+Integer.MAX_VALUE 获取整型的最大值，整型的最大值 + 1，变为了整型的最小值，再 + 1编程次小值，依次类推。
+反之，最小值 -1 ，变为了最大值，依次类推。
+
+4、八种基本数据类型的默认值：boolean: false       char: ''(空)
+
+5、自动数据类型转换
+  自动转换按从低到高的顺序转换。不同类型数据间的优先关系如下：
+      低--------------------------------------------->高
+      byte,short,char-> int -> long -> float -> double
+  运算中，不同类型的数据先转化为同一类型，然后进行运算，转换规则如下：
+  操作数1类型	操作数2类型	转换后的类型
+  byte、short、char	int	int
+  byte、short、char、int	long	long
+  byte、short、char、int、long	float	float
+  byte、short、char、int、long、float	double	double
+
+6、注意：任何类型的数据都向String转型
+
+总结：
+1、掌握Java八种基本数据类型
+2、八种基本数据类型的占用位数、默认值、区别
+3、掌握数据类型间的自动和强制转换
+
+参考博客：
+http://blog.csdn.net/yulei_qq/article/details/8992664
