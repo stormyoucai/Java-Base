@@ -1,0 +1,23 @@
+1、所有的IO操作都保存在java.io包中。
+
+2、在整个IO包中，唯一表示与文件有关的类就是File类。File可进行创建、删除文件等操作。
+
+3、注意观察File的构造方法。
+
+4、掌握File的主要方法和常量。
+
+5、pathSeparator（windows用“;”，linux用“:”）：表示路径分隔符，它是static final声明的常量，这里之所以是小写是Java的历史遗留问题。
+
+6、separator（windows用“\”,linux用“/”）：表示路径分隔符
+
+7、从程序的运行结果可以发现，所有的操作并不会立刻执行，因为Java是通过JVM与底层进行交互的，所以所有的操作需要经过JVM，就有可能产生延迟。
+
+
+
+
+总结：
+1、构造方法,createNewFile(),delete(),exists(),list(),listFiles(),isDirectory(),mkdir(),length(),renameTo(File dest)
+
+2、File是在java.io包中唯一与文件本身有关的，可以进行创建、删除等常见的文件操作
+
+3、使用File提供的系统路径分隔符，保证Java的可移植性
