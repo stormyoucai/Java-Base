@@ -1,0 +1,38 @@
+1、random随机的  access存取  RandomAccessFile随机存取类
+
+2、RandomAccessFile类的主要功能是完成随机读取功能，可以读取指定位置的内容
+
+3、File类是针对文件本身进行操作的；而要想对文件本身进行操作可以使用RandomAccessFile类，此类属于随机读取类，
+可以随机读取一个文件中指定位置的数据。
+
+4、在文件中，所有的内容都是按照字节存放的，都有固定的保存位置
+
+5、构造方法里的模式：r：只读；w：只写；rw：读写，使用此模式，如果文件不存在，则会自动创建
+
+6、它是一个直接继承Object的，独立的类
+
+7、注意：字符串不够整数字节（即8位）的拿空格补齐
+
+8、RandomAccessFile是用来访问那些保存数据记录的文件的，你就可以用seek( )方法来访问记录，并进行读写了，
+这些记录的大小不必相同；但是其大小和位置必须是可知的。但是该类仅限于操作文件。
+
+9、RandomAccessFile的绝大多数功能，但不是全部，已经被JDK 1.4的nio的"内存映射文件(memory-mapped files)"给取代了
+
+10、Randomaccessfile类中的writeInt等方法在windows记事本中乱码或者不显示，但是使用read方法可以正常读取的原因：
+记事本查看的话因为记事本是查询的gbk码表，而Java使用的是Unicode码表，所以插入的是乱码，
+write插入的是8位（1个字节byte=8位），writeInt插入的是4位，文件的位置很重要，否则读取或乱码
+
+
+
+
+
+
+
+总结：
+1、构造方法，close(),read(byte[] b),readByte(),readInt(),seek(long pos),writeBytes(Stirng s),writeInt(int v)
+
+2、RandomAccessFile类操作起来比较麻烦，所以在IO中会提供专门的输入、输出操作
+
+3、对于RandomAccessFile掌握其作用以及会使用该类读取指定位置的数据即可
+
+参考博客：
