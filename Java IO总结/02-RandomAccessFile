@@ -19,12 +19,8 @@
 9、RandomAccessFile的绝大多数功能，但不是全部，已经被JDK 1.4的nio的"内存映射文件(memory-mapped files)"给取代了
 
 10、Randomaccessfile类中的writeInt等方法在windows记事本中乱码或者不显示，但是使用read方法可以正常读取的原因：
-记事本查看的话因为记事本是查询的gbk码表，而Java使用的是Unicode码表，所以插入的是乱码，
-write插入的是8位（1个字节byte=8位），writeInt插入的是4位，文件的位置很重要，否则读取或乱码
-
-
-
-
+记事本查看的话因为记事本是查询的gbk码表，而Java使用的是Unicode码表，所以插入的内容在记事本中看到是乱码，而读取出来却是正确
+write插入的是8位（1个字节byte=8位），writeInt插入的是4位，文件的位置很重要，否则导致读取错乱或乱码
 
 
 
