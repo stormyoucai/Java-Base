@@ -45,6 +45,9 @@ Flushable接口：表示刷新，清空内存中的数据
 所有的硬盘上保存的文件或是进行传输的时候都是以字节的方式进行的。包括图片也是按字节完成，
 而字符只有在内存中才会形成，所以使用字节操作是最多的。
 
+8、Intellij idea中给主函数args赋值：
+Edit Configurations ——> Program arguments —— 多个参数间空格分割
+
 总结：
 1、掌握OutputStream和InputStream常用方法，以及其各个子类的特性
 
