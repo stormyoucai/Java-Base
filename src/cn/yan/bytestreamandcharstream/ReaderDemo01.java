@@ -14,7 +14,7 @@ public class ReaderDemo01 {
         int len = reader.read(c);
         reader.close();
 
-        String str = new String(c,0,len);   //注意这块，去char数组的一部分进行输出
+        String str = new String(c,0,len);   //注意这块，取char数组的一部分进行输出
         System.out.println(c);
 
     }
