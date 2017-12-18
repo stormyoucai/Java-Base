@@ -1,0 +1,29 @@
+1、ByteArrayInputStream和ByteArrayOutputStream:
+之前所学输入输出都是从文件中来的，本节将输入输出的位置设置到了内存之上
+
+2、ByteArrayInputStream  主要功能：将内容写入到内存中
+    ByteArrayInputStream 包含一个内部缓冲区，该缓冲区包含从流中读取的字节。内部计数器跟踪 read 方法要提供的下一个字节。
+    关闭 ByteArrayInputStream 无效。此类中的方法在关闭此流后仍可被调用，而不会产生任何 IOException。
+    注意：由它的构造方法可以看出，它需要提供一个byte数组作为缓冲区
+   ByteArrayOutputStream 主要功能：将内存中的数据输出
+    此类实现了一个输出流，其中的数据被写入一个 byte 数组。缓冲区会随着数据的不断写入而自动增长。可使用 toByteArray() 和 toString() 获取数据。
+    关闭 ByteArrayOutputStream 无效。此类中的方法在关闭此流后仍可被调用，而不会产生任何 IOException。
+    ByteArrayOutputStream是用来缓存数据的，向它的内部缓冲区写入数据，缓冲区自动增长，当写入完成时可以从中提取数据。
+    由于这个原因，ByteArrayOutputStream常用于存储数据以用于一次写入。
+
+注意：以前所学，以“程序”为参照物：输入input，      输出output，      都是从程序的角度来看的
+      本节所学，以“内存”为参数物：写入到内存input  从内存输出output  都是从内存的角度来看的
+这里主要是内存和程序进行交互
+
+3、实际上内存的输入就是在构造方法上将数据传入到内存之中。
+   内存的输出就是从内存中写出数据。
+
+
+
+
+总结：
+1、注意其构造方法，以及构造方法接受的参数
+
+2、内存操作流的操作对象一定是以内存为准的，即以内存为参照物，不要以程序为准
+
+3、内存操作流很重要，一定要掌握
