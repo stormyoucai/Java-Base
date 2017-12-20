@@ -1,0 +1,37 @@
+URI，是uniform resource identifier，统一资源标识符，用来唯一的标识一个资源
+
+URL，是uniform resource locator，统一资源定位器，它是一种具体的URI,
+即URL可以用来标识一个资源，而且还指明了如何locate(定位到)这个资源。
+
+URN，是uniform resource name，统一资源命名，是通过名字来标识资源，
+比如mailto:java-net@java.sun.com
+
+三者关系：
+URI是以一种抽象的，高层次概念定义统一资源标识，
+而URL和URN则是具体的资源标识的方式。（一个以路径标识，一个以名字标识）
+URL和URN都是一种URI。
+
+URI可以是绝对路径，也可以是相对路径
+URL必须是绝对路径
+URN则是相对路径
+
+总结：
+1、URL是一种具体的URI，它不仅唯一标识资源，而且还提供了定位该资源的信息。
+2、URI是一种语义上的抽象概念，可以是绝对的，也可以是相对的，
+3、而URL则必须提供足够的信息来定位，所以，是绝对的，
+4、通常说的relative URL，则是针对另一个absolute URL，本质上还是绝对的。
+注：这里的绝对(absolute)是指包含scheme，而相对(relative)则不包含scheme。
+URI抽象结构     [scheme:]scheme-specific-part[#fragment]
+
+[scheme:][//authority][path][?query][#fragment]
+
+authority为[user-info@]host[:port]
+
+这个评论有意思：
+URL可以是URI 也可以不是URI 这要根据该URL是否是唯一的资源标示符
+www.baidu.com是URL 不是URI
+www.baidu.com/index.html 即是URL 也是URI
+URL每部分都有具体含义 URI仅仅是唯一标识字符串
+
+参考博客：
+https://www.cnblogs.com/gaojing/archive/2012/02/04/2413626.html
