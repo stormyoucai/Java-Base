@@ -1,4 +1,4 @@
-/**
+package cn.yan.base; /**
  * Created by yanchongsheng on 2017/12/8.
  */
 
